@@ -1,0 +1,24 @@
+{
+  "name": "Ticket History",
+  "author": {
+    "name": "Zena Hirsch",
+    "email": "zena@vimeo.com",
+    "url": "https://www.vimeo.com"
+  },
+  "defaultLocale": "en",
+  "private": true,
+  "location": {
+    "support": {
+      "ticket_sidebar": "assets/index.html"
+    }
+  },
+  "parameters": [
+    {
+      "name": "list_length",
+      "type": "number",
+      "default": 5
+    }
+  ],
+  "version": "1.0",
+  "frameworkVersion": "2.0"
+}

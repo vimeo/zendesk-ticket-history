@@ -1,0 +1,33 @@
+section[data-main] {
+  h3 {
+    margin-top: 5px;
+  }
+
+  .list-group-item-heading {
+  	margin-bottom: 7px;
+  }
+
+  .label-new {
+  	background-color: #F5CA00;
+  }
+
+  .label-open {
+  	background-color: #E82A2A;
+  }
+
+  .label-hold {
+  	background-color: #000;
+  }
+
+  .label-pending {
+  	background-color: #59BBE0;
+  }
+
+  .label-solved {
+  	background-color: #828282;
+  }
+
+  .label-closed {
+  	background-color: #ddd;
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "zendesk-ticket-history",
+  "version": "0.0.1",
+  "description": "Displays recent tickets in the ticket sidebar.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zenahirsch/zendesk-ticket-history"
+  },
+  "scripts": {
+    "build": "webpack -p",
+    "watch": "webpack --watch"
+  },
+  "license": "Apache-2.0",
+  "author": "Zena Hirsch <zena@vimeo.com>",
+  "keywords": [
+    "zendesk",
+    "tickets",
+    "recent"
+  ],
+  "bugs": {
+    "url": "https://github.com/zenahirsch/zendesk-ticket-history/issues"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-eslint": "^5.0.0",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "eslint": "~2.2.0",
+    "eslint-loader": "^1.2.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "handlebars": "^4.0.5",
+    "handlebars-loader": "^1.4.0",
+    "html-webpack-plugin": "^2.22.0",
+    "jasmine-core": "^2.4.1",
+    "json-loader": "^0.5.4",
+    "karma": "^1.1.2",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-webpack": "^1.7.0",
+    "loader-utils": "^0.2.15",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.13"
+  },
+  "dependencies": {
+    "moment": "^2.17.1"
+  }
+}

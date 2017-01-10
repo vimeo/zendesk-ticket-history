@@ -1,0 +1,12 @@
+{
+  "app": {
+    "description": "Displays recent tickets in the ticket sidebar.",
+    "name": "Recent Tickets",
+    "parameters": {
+      "list_length": {
+        "label": "List Length",
+        "helpText": "How many items should show up in the recent tickets list?"
+      }
+    }
+  }
+}

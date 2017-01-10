@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+	<ul id="recent-tickets" class="list-group">
+		{{#each recent_tickets}}
+			<a href="#" class="list-group-item ticket-link {{#if this.current_ticket}}active{{/if}}" data-ticket-id="{{this.id}}">
+				{{#if this.truncated_subject}}
+					<h6 class="list-group-item-heading" data-toggle="tooltip" data-placement="auto" title="{{this.subject}}">#{{this.id}}: {{this.truncated_subject}}</h6>
+				{{else}}
+					<h6 class="list-group-item-heading">#{{this.id}}: {{this.subject}}</h6>
+				{{/if}}
+				<div class="list-group-item-text small row">
+					<div class="text-capitalize col-xs-3">
+						<span class="label label-{{this.status}}">{{this.status}}</span>
+					</div>
+					<div class="small col-xs-5">
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;<span data-toggle="tooltip" data-placement="auto" title="{{this.created_at_static}}">{{this.created_at_relative}}</span>
+					</div>
+					<div class="small col-xs-4">
+						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;{{this.assignee_name}}
+					</div>
+				</div>
+			</a>
+		{{/each}}
+	</ul>
+	<div class="panel-footer text-center text-muted small">
+  		{{this.ticket_count}} ticket(s) from <strong>{{this.requester.name}}</strong> {{#unless this.showing_all}}(<a href="#" id="show_all">Show All</a>){{/unless}}
+  	</div>
+</div>
