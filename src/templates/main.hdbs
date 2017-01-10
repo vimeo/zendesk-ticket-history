@@ -3,18 +3,22 @@
 		{{#each recent_tickets}}
 			<a href="#" class="list-group-item ticket-link {{#if this.current_ticket}}active{{/if}}" data-ticket-id="{{this.id}}">
 				{{#if this.truncated_subject}}
-					<h6 class="list-group-item-heading" data-toggle="tooltip" data-placement="auto" title="{{this.subject}}">#{{this.id}}: {{this.truncated_subject}}</h6>
+					<div class="list-group-item-heading">
+						<strong>#{{this.id}}</strong>&nbsp;&nbsp;<span data-toggle="tooltip" data-placement="auto" title="{{this.subject}}">{{this.truncated_subject}}</span>
+					</div>
 				{{else}}
-					<h6 class="list-group-item-heading">#{{this.id}}: {{this.subject}}</h6>
+					<div class="list-group-item-heading">
+						<strong>#{{this.id}}</strong>&nbsp;&nbsp;{{this.subject}}
+					</div>
 				{{/if}}
-				<div class="list-group-item-text small row">
+				<div class="list-group-item-text row">
 					<div class="text-capitalize col-xs-3">
 						<span class="label label-{{this.status}}">{{this.status}}</span>
 					</div>
-					<div class="small col-xs-5">
+					<div class="col-xs-5">
 						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;<span data-toggle="tooltip" data-placement="auto" title="{{this.created_at_static}}">{{this.created_at_relative}}</span>
 					</div>
-					<div class="small col-xs-4">
+					<div class="col-xs-4">
 						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;{{this.assignee_name}}
 					</div>
 				</div>
