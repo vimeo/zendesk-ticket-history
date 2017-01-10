@@ -1,10 +1,24 @@
 section[data-main] {
   h3 {
-    margin-top: 5px;
+    margin-top: 7px;
+  }
+
+  .list-group {
   }
 
   .list-group-item-heading {
+  	font-size: 0.8em;
   	margin-bottom: 7px;
+  	color: #333;
+  }
+
+  .list-group-item-text {
+  	font-size: 0.8em;
+  	color: #555;
+  }
+
+  .list-group-item {
+  	padding: 13px;
   }
 
   .label-new {
@@ -28,6 +42,6 @@ section[data-main] {
   }
 
   .label-closed {
-  	background-color: #ddd;
+  	background-color: #aaa;
   }
 }
