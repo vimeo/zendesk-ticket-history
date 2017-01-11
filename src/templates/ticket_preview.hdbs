@@ -1,3 +1,5 @@
-<p>{{this.description}}</p>
+<h4 style="margin-top:0">Original inquiry from <span class="text-capitalize">{{this.type}}</span> #{{this.id}}</h4>
 
-<button type="button" class="btn btn-default" id="open-ticket">Open Ticket</button>
+<p>{{this.description}}</p>
+<hr />
+<button type="button" class="btn btn-primary btn-block" id="open-ticket">Open Ticket</button>

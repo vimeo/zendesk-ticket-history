@@ -24,6 +24,8 @@ class Modal {
 
 	renderTicketPreview(data) {
 		let template_data = {
+			id: data.ticket.id,
+			type: data.ticket.type,
 			description: data.ticket.description
 		};
 	
