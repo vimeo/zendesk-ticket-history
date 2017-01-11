@@ -1,0 +1,34 @@
+{
+  "app": {
+    "description": "Zeigt die letzten Tickets in der Ticket-Seitenleiste an.",
+    "name": "Ticket-Verlauf",
+    "parameters": {
+      "list_length": {
+        "label": "Liste Länge",
+        "helpText": "Wie viele Artikel sollten in der letzten Kartenliste erscheinen?"
+      }
+    }
+  },
+
+  "ticket_preview": "Ticketvorschau (#{{id}})",
+
+  "go_to_ticket": "Gehe zu Ticket",
+
+  "new": "neu",
+
+  "open": "offen",
+
+  "hold": "angehalten",
+
+  "pending": "wartend",
+
+  "solved": "gelöst",
+
+  "closed": "geschlossen",
+
+  "unassigned": "Nicht zugewiesen",
+
+  "tickets_from": "{{count}} ticket(s) von  {{{requester_name}}}",
+
+  "show_all": "Zeige alles"
+}
