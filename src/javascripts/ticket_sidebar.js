@@ -38,12 +38,6 @@ class TicketSidebar {
 			this.client.invoke('instances.create', {
 				location: 'modal',
 				url: 'assets/index.html?ticket_id=' + $(e.currentTarget).data('ticket-id')
-			}).then((modalContext) => {
-				// The modal is on the screen now!
-				let modalClient = this.client.instance(modalContext['instances.create'][0].instanceGuid);
-				modalClient.on('modal.close', function() {
-				  // The modal has been closed.
-				});
 			});
 		});
 
