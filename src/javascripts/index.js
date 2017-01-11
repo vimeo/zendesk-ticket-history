@@ -6,6 +6,7 @@ var client = ZAFClient.init();
 client.on('app.registered', function(appData) {
   client.get('currentUser.locale').then(userData => {
     I18n.loadTranslations(userData['currentUser.locale']);
+    moment.locale(userData['currentUser.locale']);
     let location = appData.context.location;
     let App = require(`./${location}.js`).default;
     new App(client, appData);
