@@ -79,7 +79,8 @@ class TicketSidebar {
 			this.attachEvents();
 
 			$('[data-toggle="tooltip"]').tooltip({
-				template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner small"></div></div>'
+				template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner small"></div></div>',
+				delay: { show: 500, hide: 0 }
 			});
 		});
 	}
