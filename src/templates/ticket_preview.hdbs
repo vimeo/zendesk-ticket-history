@@ -1,9 +1,12 @@
-<h4 style="margin-top:0">Original inquiry from <span class="text-capitalize">{{this.type}}</span> #{{this.id}}</h4>
+<div id="preview-content">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h1>Ticket Preview ({{#if this.type}}<span class="text-capitalize">{{this.type}}</span> {{/if}}#{{this.id}})</h1>
+		</div>
+		<div class="panel-body">
+			<p>{{{this.description}}}</p>
+		</div>
+	</div>
 
-<div id="content" style="max-height:200px;overflow:scroll;">
-	<p>{{{this.description}}}</p>
+	<button type="button" class="btn btn-primary btn-block" id="open-ticket">Open Ticket</button>
 </div>
-
-<hr />
-
-<button type="button" class="btn btn-primary btn-block" id="open-ticket">Open Ticket</button>
