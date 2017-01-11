@@ -1,0 +1,20 @@
+section[data-main] {
+	#preview-content {
+
+		.panel-body {
+			max-height: 200px;
+			overflow: scroll;
+		}
+
+		h1 {
+			font-size: 14px;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		p {
+			line-height: 20px;
+			font-size: 14px;
+		}
+	}
+}
