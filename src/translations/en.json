@@ -12,7 +12,7 @@
 
   "ticket_preview": "Ticket Preview (#{{id}})",
 
-  "go_to_ticket": "Go To Ticket",
+  "go_to_ticket": "Go to ticket",
 
   "new": "new",
 
@@ -28,7 +28,7 @@
 
   "unassigned": "unassigned",
 
-  "tickets_from": "{{count}} ticket(s) from {{requester_name}}",
+  "tickets_from": "{{count}} ticket(s) from {{{requester_name}}}",
 
-  "show_all": "Show All"
+  "show_all": "Show all"
 }
