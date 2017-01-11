@@ -8,5 +8,5 @@
 		</div>
 	</div>
 
-	<button type="button" class="btn btn-primary btn-block" id="open-ticket">Open Ticket</button>
+	<button type="button" class="btn btn-primary btn-block" id="open-ticket">Go To Ticket</button>
 </div>
