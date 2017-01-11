@@ -1,7 +1,7 @@
 <h4 style="margin-top:0">Original inquiry from <span class="text-capitalize">{{this.type}}</span> #{{this.id}}</h4>
 
 <div id="content" style="max-height:200px;overflow:scroll;">
-	<p>{{this.description}}</p>
+	<p>{{{this.description}}}</p>
 </div>
 
 <hr />

@@ -26,7 +26,7 @@ class Modal {
 		let template_data = {
 			id: data.ticket.id,
 			type: data.ticket.type,
-			description: data.ticket.description
+			description: data.ticket.description.replace(/(?:\r\n|\r|\n)/g, '<br />')
 		};
 	
 		this.view.switchTo('ticket_preview', template_data);
