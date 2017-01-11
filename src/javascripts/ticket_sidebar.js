@@ -20,12 +20,13 @@ class TicketSidebar {
 			this.client.invoke('resize', { height: newHeight, width: '100%' });
 		}});
 
+		this.view.switchTo('loading');
+
 		this.getRequester().then(data => {
 			this.requester = data['ticket.requester'];
 
 			this.getRecentTickets().then(data => {
 				this.renderMain(data, false);
-				this.view.switchTo('loading');
 			});
 		});
 	}
