@@ -13,7 +13,6 @@ var externalAssets = {
     'https://cdn.jsdelivr.net/g/lodash@4.14.0,handlebarsjs@4.0.5,jquery@3.1.0',
     'https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js',
     'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js'
   ]
 }
