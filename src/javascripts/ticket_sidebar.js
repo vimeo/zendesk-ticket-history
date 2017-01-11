@@ -3,7 +3,6 @@ import Storage from 'storage';
 
 const MAX_HEIGHT = 375;
 const MAX_SUBJECT_LENGTH = 40;
-const MAX_DESCRIPTION_LENGTH = 150;
 
 class TicketSidebar {
 	constructor(client, data) {
