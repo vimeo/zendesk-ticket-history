@@ -13,19 +13,19 @@
 				{{/if}}
 				<div class="list-group-item-text row">
 					<div class="text-capitalize col-xs-3">
-						<span class="label label-{{this.status}}">{{this.status}}</span>
+						<span class="label label-{{this.status}}">{{t this.status}}</span>
 					</div>
 					<div class="col-xs-5">
 						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;<span data-toggle="tooltip" data-placement="auto" title="{{this.created_at_static}}">{{this.created_at_relative}}</span>
 					</div>
 					<div class="col-xs-4">
-						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;{{this.assignee_name}}
+						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;{{#if this.assignee_name}}{{this.assignee_name}}{{else}}<span class="text-capitalize">{{t "unassigned"}}</span>{{/if}}
 					</div>
 				</div>
 			</a>
 		{{/each}}
 	</ul>
 	<div class="panel-footer text-center text-muted small">
-  		{{this.ticket_count}} ticket(s) from <strong>{{this.requester.name}}</strong> {{#unless this.showing_all}}(<a href="#" id="show_all">Show All</a>){{/unless}}
+		{{t "tickets_from" count=this.ticket_count requester_name=this.requester.name}}{{#unless this.showing_all}} (<a href="#" id="show_all">{{t "show_all"}}</a>){{/unless}}
   	</div>
 </div>

@@ -1,0 +1,34 @@
+{
+  "app": {
+    "description": "Affiche les tickets récents dans la barre latérale du ticket.",
+    "name": "Historique des tickets",
+    "parameters": {
+      "list_length": {
+        "label": "Longueur de liste",
+        "helpText": "Combien d'articles devraient apparaître dans la liste des tickets récents?"
+      }
+    }
+  },
+
+  "ticket_preview": "Aperçu des tickets (#{{id}})",
+
+  "go_to_ticket": "Aller au ticket",
+
+  "new": "nouveau",
+
+  "open": "ouvert",
+
+  "hold": "en pause",
+
+  "pending": "en attente",
+
+  "solved": "résolu",
+
+  "closed": "clos",
+
+  "unassigned": "non affecté",
+
+  "tickets_from": "{{count}} tickets(s) de {{{requester_name}}}",
+
+  "show_all": "Afficher tout"
+}

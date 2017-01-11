@@ -1,12 +1,34 @@
 {
   "app": {
     "description": "Displays recent tickets in the ticket sidebar.",
-    "name": "Recent Tickets",
+    "name": "Ticket History",
     "parameters": {
       "list_length": {
         "label": "List Length",
         "helpText": "How many items should show up in the recent tickets list?"
       }
     }
-  }
+  },
+
+  "ticket_preview": "Ticket Preview (#{{id}})",
+
+  "go_to_ticket": "Go To Ticket",
+
+  "new": "new",
+
+  "open": "open",
+
+  "hold": "hold",
+
+  "pending": "pending",
+
+  "solved": "solved",
+
+  "closed": "closed",
+
+  "unassigned": "unassigned",
+
+  "tickets_from": "{{count}} ticket(s) from {{requester_name}}",
+
+  "show_all": "Show All"
 }
