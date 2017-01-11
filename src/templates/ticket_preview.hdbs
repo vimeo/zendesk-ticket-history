@@ -1,0 +1,3 @@
+<p>{{this.description}}</p>
+
+<button type="button" class="btn btn-default" id="open-ticket">Open Ticket</button>
