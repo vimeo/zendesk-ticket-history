@@ -131,7 +131,6 @@ class TicketSidebar {
 					}
 				});
 			} else {
-				formatted_ticket.assignee_name = 'Unassigned';
 				formatted_tickets.push(formatted_ticket);
 
 				if (formatted_tickets.length === recent_tickets.length) {
