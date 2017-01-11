@@ -1,7 +1,7 @@
 import View from 'view';
 import Storage from 'storage';
 
-const MAX_HEIGHT = 400;
+const MAX_HEIGHT = 350;
 const WIDTH = 500;
 
 class Modal {
