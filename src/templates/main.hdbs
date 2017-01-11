@@ -1,7 +1,7 @@
 <div class="panel panel-default">
 	<ul id="recent-tickets" class="list-group">
 		{{#each recent_tickets}}
-			<a href="#" class="list-group-item ticket-link {{#if this.current_ticket}}active{{/if}}" data-ticket-id="{{this.id}}">
+			<a href="#" class="list-group-item ticket-link {{#if this.current_ticket}}active disabled{{/if}}" data-ticket-id="{{this.id}}">
 				{{#if this.truncated_subject}}
 					<div class="list-group-item-heading">
 						<strong>#{{this.id}}</strong>&nbsp;&nbsp;<span data-toggle="tooltip" data-placement="auto" title="{{this.subject}}">{{this.truncated_subject}}</span>
