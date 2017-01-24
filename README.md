@@ -12,8 +12,7 @@ If you'd like to change the default number of tickets shown in the app, you can 
 
 ## Screenshots
 
-_Sidebar app_
-![](https://github.com/vimeo/zendesk-ticket-history/blob/master/dist/assets/screenshot-0.png)
 
-_Lightbox ticket preview_
-![](https://github.com/vimeo/zendesk-ticket-history/blob/master/dist/assets/screenshot-1.png)
+_Sidebar app_ | _Lightbox ticket preview_
+:-----------: | :------------------------:
+![](https://github.com/vimeo/zendesk-ticket-history/blob/master/dist/assets/screenshot-0.png) | ![](https://github.com/vimeo/zendesk-ticket-history/blob/master/dist/assets/screenshot-1.png)
