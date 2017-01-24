@@ -1,6 +1,6 @@
 # Ticket History
 
-**Ticket History** is custom Zendesk app that displays a user's recent tickets in the ticket sidebar, along with the status, creation date, and currently assigned user. Clicking on a particular ticket will open up a preview of the requester's original comment, and also allows the user to switch directly to that ticket in the agent interface. 
+**Ticket History** is a custom Zendesk app that displays a user's recent tickets in the ticket sidebar, along with the status, creation date, and currently assigned user. Clicking on a particular ticket will open up a preview of the requester's original comment, and also allows the user to switch directly to that ticket in the agent interface. 
 
 ## Installation
 
