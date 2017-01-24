@@ -7,3 +7,14 @@ A custom Zendesk app that displays a user's recent tickets in the ticket sidebar
 Installation is simple. Simply search for the Ticket History app in the [Zendesk Apps Directory](https://www.zendesk.com/apps/) and click Install.
 
 If you'd like to change the default number of tickets shown in the app, you can do so by adjusting the "List Length" property in the app settings.
+
+## Screenshots
+
+_Sidebar app_
+![](https://github.com/vimeo/zendesk-ticket-history/blob/master/dist/assets/screenshot-0.png)
+
+_Lightbox ticket preview_
+![](https://github.com/vimeo/zendesk-ticket-history/blob/master/dist/assets/screenshot-1.png)
+
+_Settings page_
+![](https://github.com/vimeo/zendesk-ticket-history/blob/master/dist/assets/screenshot-2.png)
