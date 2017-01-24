@@ -9,3 +9,4 @@ dist/translations/
 dist/.zat
 dist/tmp/
 *.sublime-*
+.DS_Store
