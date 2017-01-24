@@ -1,3 +1,9 @@
-# zendesk-ticket-history
+# Ticket History
 
-Shows a user's most recent ticket history in the ticket sidebar.
+A custom Zendesk app that displays a user's recent tickets in the ticket sidebar, along with the status, creation date, and currently assigned user. Clicking on a particular ticket will open up a preview of the requester's original comment, and also allows the user to switch directly to that ticket in the agent interface. 
+
+## Installation
+
+Installation is simple. Simply search for the Ticket History app in the [Zendesk Apps Directory](https://www.zendesk.com/apps/) and click Install.
+
+If you'd like to change the default number of tickets shown in the app, you can do so by adjusting the "List Length" property in the app settings.
