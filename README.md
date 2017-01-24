@@ -15,6 +15,3 @@ _Sidebar app_
 
 _Lightbox ticket preview_
 ![](https://github.com/vimeo/zendesk-ticket-history/blob/master/dist/assets/screenshot-1.png)
-
-_Settings page_
-![](https://github.com/vimeo/zendesk-ticket-history/blob/master/dist/assets/screenshot-2.png)
