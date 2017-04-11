@@ -19,7 +19,7 @@
 						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;<span data-toggle="tooltip" data-placement="auto" title="{{this.created_at_static}}">{{this.created_at_relative}}</span>
 					</div>
 					<div class="col-xs-4">
-						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;{{#if this.assignee_name}}{{this.assignee_name}}{{else}}<span class="text-capitalize">{{t "unassigned"}}</span>{{/if}}
+						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;{{#if this.assignee_name}}{{this.assignee_name}}{{else}}<span class="text-capitalize">{{{t "unassigned"}}}</span>{{/if}}
 					</div>
 				</div>
 			</a>

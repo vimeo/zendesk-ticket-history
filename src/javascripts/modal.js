@@ -34,7 +34,7 @@ class Modal {
 	}
 
 	attachEvents() {
-		$('#open-ticket').click((e) => {
+		$('#open-ticket').click(() => {
 			this.client.invoke('routeTo', 'ticket', this.ticket_id);
 			this.client.invoke('destroy');
 		});

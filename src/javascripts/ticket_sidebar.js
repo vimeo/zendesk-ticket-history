@@ -1,8 +1,8 @@
 import View from 'view';
 import Storage from 'storage';
 
-const MAX_HEIGHT = 375;
-const MAX_SUBJECT_LENGTH = 40;
+const MAX_HEIGHT = 385;
+const MAX_SUBJECT_LENGTH = 35;
 
 class TicketSidebar {
 	constructor(client, data) {
@@ -163,7 +163,6 @@ class TicketSidebar {
 
 	formatAssigneeName(name) {
 		let parts = name.split(' ');
-		let first_initial = '';
 
 		if (parts.length < 2) {
 			return name;
