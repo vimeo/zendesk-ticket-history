@@ -116,7 +116,7 @@ class TicketSidebar {
 			}
 
 			if (ticket.subject.length > MAX_SUBJECT_LENGTH) {
-				formatted_ticket.truncated_subject = this.truncateSubject(ticket.subject);
+				formatted_ticket.truncated_subject = this.truncateText(formatted_ticket.subject, MAX_SUBJECT_LENGTH);
 			}
 
 			if (ticket.assignee_id) {
@@ -152,12 +152,12 @@ class TicketSidebar {
 		});
 	}
 
-	truncateSubject(subject) {
-		if (subject.length > MAX_SUBJECT_LENGTH) {
-			return subject.substring(0, MAX_SUBJECT_LENGTH + 1) + '...';
+	truncateText(text, len) {
+		if (text.length > len) {
+			return text.substring(0, len + 1) + '...';
 		}
 
-		return subject;
+		return text;
 	}
 
 	formatAssigneeName(name) {
