@@ -1,7 +1,6 @@
 import View from 'view';
 import Storage from 'storage';
 
-const MAX_HEIGHT = 385;
 const MAX_SUBJECT_LENGTH = 35;
 
 class TicketSidebar {
@@ -15,8 +14,8 @@ class TicketSidebar {
 
 		this.storage = new Storage(this._metadata.installationId);
 		this.view = new View({ afterRender: () => {
-			let newHeight = Math.min($('html').height(), MAX_HEIGHT);
-			this.client.invoke('resize', { height: newHeight, width: '100%' });
+			let docHeight = $('html').height();
+			this.client.invoke('resize', { height: docHeight });
 		}});
 
 		this.view.switchTo('loading');
