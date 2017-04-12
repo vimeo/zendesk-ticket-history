@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<div class="panel panel-default recent-tickets-panel">
 	<ul id="recent-tickets" class="list-group">
 		{{#each recent_tickets}}
 			<a href="#" class="list-group-item ticket-link {{#if this.current_ticket}}active disabled{{/if}}" data-ticket-id="{{this.id}}">
@@ -8,18 +8,28 @@
 					</div>
 				{{else}}
 					<div class="list-group-item-heading" style="white-space:nowrap;">
-						<strong>#{{this.id}}</strong>&nbsp;&nbsp;{{this.subject}}
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-xs-12">
+									<strong>#{{this.id}}</strong>&nbsp;&nbsp;{{this.subject}}
+								</div>
+							</div>
+						</div>
 					</div>
 				{{/if}}
-				<div class="list-group-item-text row" style="white-space:nowrap;">
-					<div class="text-capitalize col-xs-3">
-						<span class="label label-{{this.status}}">{{t this.status}}</span>
-					</div>
-					<div class="col-xs-5">
-						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;<span data-toggle="tooltip" data-placement="auto" title="{{this.created_at_static}}">{{this.created_at_relative}}</span>
-					</div>
-					<div class="col-xs-4" style="overflow:hidden;">
-						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;{{#if this.assignee_name}}{{this.assignee_name}}{{else}}<span class="text-capitalize">{{{t "unassigned"}}}</span>{{/if}}
+				<div class="list-group-item-text">
+					<div class="container-fluid">
+						<div class="row" style="white-space:nowrap;">
+							<div class="text-capitalize col-xs-3"> 
+								<span class="label label-{{this.status}}">{{t this.status}}</span>
+							</div>
+							<div class="col-xs-5">
+								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;<span data-toggle="tooltip" data-placement="auto" title="{{this.created_at_static}}">{{this.created_at_relative}}</span>
+							</div>
+							<div class="col-xs-4" style="overflow:hidden;">
+								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;{{#if this.assignee_name}}{{this.assignee_name}}{{else}}<span class="text-capitalize">{{{t "unassigned"}}}</span>{{/if}}
+							</div>
+						</div>
 					</div>
 				</div>
 			</a>

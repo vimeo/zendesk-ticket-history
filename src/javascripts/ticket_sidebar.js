@@ -15,6 +15,8 @@ class TicketSidebar {
 		this.storage = new Storage(this._metadata.installationId);
 		this.view = new View({ afterRender: () => {
 			let docHeight = $('html').height();
+			let docWidth = $('html').width();
+			$('.container-fluid').css('font-size', docWidth / 30 + 'px');
 			this.client.invoke('resize', { height: docHeight });
 		}});
 
