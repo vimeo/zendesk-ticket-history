@@ -1,0 +1,7 @@
+<div class="panel panel-default recent-tickets-panel">
+	<div class="panel-body">
+		<div class="alert alert-danger" role="alert">
+			<p class="small">Uh oh, looks like there was an error. Please report this, along with your browser's console contents, by <a href="https://github.com/vimeo/zendesk-ticket-history/issues/new">opening a ticket</a>.</p>
+		</div>
+	</div>
+</div>

@@ -27,6 +27,9 @@ class TicketSidebar {
 
 			this.getRecentTickets().then(data => {
 				this.renderMain(data, false);
+			}).catch(err => {
+				console.error(err);
+				this.renderError(err);
 			});
 		});
 	}
@@ -49,6 +52,9 @@ class TicketSidebar {
 			this.getRecentTickets().then(data => {
 				this.view.switchTo('loading');
 				this.renderMain(data, true);
+			}).catch(err => {
+				console.error(err);
+				this.renderError(err);
 			});
 		});
 	}
@@ -83,6 +89,10 @@ class TicketSidebar {
 				delay: { show: 500, hide: 0 }
 			});
 		});
+	}
+
+	renderError(err) {
+		this.view.switchTo('error', err);
 	}
 
 	getRequester() {
