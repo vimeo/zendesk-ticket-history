@@ -74,7 +74,7 @@ class TicketSidebar {
 			this.showing_all = true;
 		}
 
-		this.formatTickets(display_tickets, (tickets) => {
+		this.formatTickets(display_tickets).then(tickets => {
 			template_data.ticket_count = data.count;
 			template_data.recent_tickets = tickets;
 			template_data.requester = this.requester;
@@ -88,6 +88,9 @@ class TicketSidebar {
 				template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner small"></div></div>',
 				delay: { show: 500, hide: 0 }
 			});
+		}).catch(err => {
+			console.error(err);
+			this.renderError(err);
 		});
 	}
 
@@ -103,51 +106,51 @@ class TicketSidebar {
 		return this.client.request({ url: `/api/v2/users/${this.requester.id}/tickets/requested.json?sort_by=created_at&sort_order=desc` });
 	}
 
-	formatTickets(recent_tickets, callback) {
-		let formatted_tickets = [];
-		let curr_ticket_id = this._context.ticketId;
+	formatTickets(recent_tickets) {
+		return new Promise((resolve, reject) => {
+			let formatted_tickets = [];
+			let curr_ticket_id = this._context.ticketId;
 
-		for (let i = 0, len = recent_tickets.length; i < len; i++) {
-			let ticket = recent_tickets[i];
+			for (let i = 0, len = recent_tickets.length; i < len; i++) {
+				let ticket = recent_tickets[i];
 
-			let formatted_ticket = {
-				created_at_relative: moment(ticket.created_at).fromNow(),
-				created_at_static: moment(ticket.created_at).format('LLL'),
-				created_at: ticket.created_at,
-				id: ticket.id,
-				truncated_subject: null,
-				subject: ticket.subject,
-				assignee_id: ticket.assignee_id,
-				assignee_name: null,
-				status: ticket.status,
-				current_ticket: false
-			};  
+				let formatted_ticket = {
+					created_at_relative: moment(ticket.created_at).fromNow(),
+					created_at_static: moment(ticket.created_at).format('LLL'),
+					created_at: ticket.created_at,
+					id: ticket.id,
+					truncated_subject: null,
+					subject: ticket.subject,
+					assignee_id: ticket.assignee_id,
+					assignee_name: null,
+					status: ticket.status,
+					current_ticket: false
+				};  
 
-			if (ticket.id === curr_ticket_id) {
-				formatted_ticket.current_ticket = true;
-			}
+				formatted_ticket.current_ticket = (ticket.id === curr_ticket_id);
 
-			if (ticket.subject.length > MAX_SUBJECT_LENGTH) {
-				formatted_ticket.truncated_subject = this.truncateText(formatted_ticket.subject, MAX_SUBJECT_LENGTH);
-			}
+				if (ticket.subject.length > MAX_SUBJECT_LENGTH) {
+					formatted_ticket.truncated_subject = this.truncateText(formatted_ticket.subject, MAX_SUBJECT_LENGTH);
+				}
 
-			if (ticket.assignee_id) {
-				this.getUserById(ticket.assignee_id).then((data) => {
-					formatted_ticket.assignee_name = this.formatAssigneeName(data.user.name);
+				if (ticket.assignee_id) {
+					this.getUserById(ticket.assignee_id).then((data) => {
+						formatted_ticket.assignee_name = this.formatAssigneeName(data.user.name);
+						formatted_tickets.push(formatted_ticket);
+
+						if (formatted_tickets.length === recent_tickets.length) {
+							resolve(formatted_tickets);
+						}
+					});
+				} else {
 					formatted_tickets.push(formatted_ticket);
 
 					if (formatted_tickets.length === recent_tickets.length) {
-						return callback(formatted_tickets);
+						resolve(formatted_tickets);
 					}
-				});
-			} else {
-				formatted_tickets.push(formatted_ticket);
-
-				if (formatted_tickets.length === recent_tickets.length) {
-					return callback(formatted_tickets);
 				}
 			}
-		}
+		});
 	}
 
 	sortTickets(tickets, field, direction) {
