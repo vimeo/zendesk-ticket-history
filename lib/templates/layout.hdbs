@@ -9,6 +9,9 @@
   </head>
   <body>
     <section data-main></section>
+    <div id="footer"  class="text-center small">
+      <a href="mailto:zena@vimeo.com">Share Feedback</a>
+    </div>
     {{#each htmlWebpackPlugin.options.vendorJs}}
       <script type="text/javascript" src="{{this}}"></script>
     {{/each}}
