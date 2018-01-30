@@ -9,7 +9,7 @@
   </head>
   <body>
     <section data-main></section>
-    <div id="footer"  class="text-center small">
+    <div id="footer" class="text-center small" style="margin-top:2em;">
       <a href="https://github.com/vimeo/zendesk-ticket-history/issues/new" target="_top">Share Feedback</a>
     </div>
     {{#each htmlWebpackPlugin.options.vendorJs}}

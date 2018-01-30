@@ -1,1 +1,3 @@
-<img src="spinner.gif" alt="loading..." />
+<div class="text-center pb-4">
+    <img src="spinner.gif" alt="loading..." />
+</div>
