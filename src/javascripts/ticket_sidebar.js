@@ -129,7 +129,7 @@ class TicketSidebar {
 
 				formatted_ticket.current_ticket = (ticket.id === curr_ticket_id);
 
-				if (ticket.subject.length > MAX_SUBJECT_LENGTH) {
+				if (ticket.subject && ticket.subject.length > MAX_SUBJECT_LENGTH) {
 					formatted_ticket.truncated_subject = this.truncateText(formatted_ticket.subject, MAX_SUBJECT_LENGTH);
 				}
 
