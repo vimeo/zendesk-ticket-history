@@ -2,6 +2,8 @@
   "app": {
     "description": "Zeigt die letzten Tickets in der Ticket-Seitenleiste an.",
     "name": "Ticket-Verlauf",
+    "installation_instructions": "Die Installation ist einfach. Suchen Sie einfach nach der App Ticket History im Zendesk Apps Marketplace und klicken Sie auf Installieren.",
+    "long_description": "Zeigt die letzten Tickets eines Benutzers in der Ticket-Sidebar zusammen mit dem Status, dem Erstellungsdatum und dem aktuell zugewiesenen Benutzer an. Wenn Sie auf ein bestimmtes Ticket klicken, wird eine Vorschau des ursprünglichen Kommentars des Anfragenden angezeigt und der Benutzer kann direkt zu diesem Ticket in der Agentenschnittstelle wechseln.",
     "parameters": {
       "list_length": {
         "label": "Liste Länge",
