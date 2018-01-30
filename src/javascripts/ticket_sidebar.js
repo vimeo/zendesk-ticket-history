@@ -135,6 +135,10 @@ class TicketSidebar {
 
 				if (ticket.assignee_id) {
 					this.getUserById(ticket.assignee_id).then((data) => {
+						if (!data) {
+							reject('Not user data found.');
+						}
+
 						formatted_ticket.assignee_name = this.formatAssigneeName(data.user.name);
 						formatted_tickets.push(formatted_ticket);
 
