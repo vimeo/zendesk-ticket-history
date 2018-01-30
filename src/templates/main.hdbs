@@ -1,17 +1,25 @@
 <div class="panel panel-default recent-tickets-panel">
 	<ul id="recent-tickets" class="list-group">
+		{{log show_satisfaction}}
 		{{#each recent_tickets}}
+			{{log ../show_satisfaction}}
 			<a href="#" class="list-group-item ticket-link {{#if this.current_ticket}}active disabled{{/if}}" data-ticket-id="{{this.id}}">
 				{{#if this.truncated_subject}}
 					<div class="list-group-item-heading" style="white-space:nowrap;">
 						<strong>#{{this.id}}</strong>&nbsp;&nbsp;<span data-toggle="tooltip" data-placement="auto" title="{{this.subject}}">{{this.truncated_subject}}</span>
+						{{#if ../show_satisfaction}}
+							&nbsp;<span class="satisfaction_symbol {{this.satisfaction_score}}" data-toggle="tooltip" data-placement="auto" title="{{this.satisfaction_score}}">{{{this.satisfaction_symbol}}}</span>
+						{{/if}}
 					</div>
 				{{else}}
 					<div class="list-group-item-heading" style="white-space:nowrap;">
 						<div class="container-fluid">
 							<div class="row">
 								<div class="col-xs-12">
-									<strong>#{{this.id}}</strong>&nbsp;&nbsp;{{this.subject}}
+									<strong>#{{this.id}}</strong>{{#if this.subject}}&nbsp;&nbsp;{{this.subject}}{{/if}}
+									{{#if ../show_satisfaction}}
+										&nbsp;<span class="satisfaction_symbol {{this.satisfaction_score}}" data-toggle="tooltip" data-placement="auto" title="{{this.satisfaction_score}}">{{{this.satisfaction_symbol}}}</span>
+									{{/if}}
 								</div>
 							</div>
 						</div>

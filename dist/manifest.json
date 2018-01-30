@@ -17,6 +17,11 @@
       "name": "list_length",
       "type": "number",
       "default": 5
+    },
+    {
+      "name": "show_satisfaction",
+      "type": "checkbox",
+      "default": true
     }
   ],
   "version": "1.0.2",

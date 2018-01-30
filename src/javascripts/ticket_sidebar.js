@@ -11,6 +11,7 @@ class TicketSidebar {
 		this.requester = null;
 		this.showing_all = false;
 		this.list_length = this._metadata.settings.list_length;
+		this.show_satisfaction = this._metadata.settings.show_satisfaction;
 
 		this.storage = new Storage(this._metadata.installationId);
 		this.view = new View({ afterRender: () => {
@@ -79,6 +80,7 @@ class TicketSidebar {
 			template_data.recent_tickets = tickets;
 			template_data.requester = this.requester;
 			template_data.showing_all = this.showing_all;
+			template_data.show_satisfaction = this.show_satisfaction;
 
 			this.sortTickets(template_data.recent_tickets, 'created_at', 'desc')
 			this.view.switchTo('main', template_data);
@@ -124,8 +126,28 @@ class TicketSidebar {
 					assignee_id: ticket.assignee_id,
 					assignee_name: null,
 					status: ticket.status,
-					current_ticket: false
+					current_ticket: false,
+					satisfaction_score: 'unknown',
+					satisfaction_symbol: ''
 				};  
+
+				if (ticket.satisfaction_rating.score) {
+					formatted_ticket.satisfaction_score = ticket.satisfaction_rating.score;
+
+					switch (ticket.satisfaction_rating.score) {
+						case 'good':
+							formatted_ticket.satisfaction_symbol = '<span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true">';
+							break;
+						case 'bad':
+							formatted_ticket.satisfaction_symbol = '<span class="glyphicon glyphicon-circle-arrow-down" aria-hidden="true">';
+							break;
+						case 'offered':
+							formatted_ticket.satisfaction_symbol = '<span class="glyphicon glyphicon-time" style="opacity:0.5;" aria-hidden="true">';
+							break;
+						default:
+							formatted_ticket.satisfaction_symbol = '';
+					}
+				}
 
 				formatted_ticket.current_ticket = (ticket.id === curr_ticket_id);
 
