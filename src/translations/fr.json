@@ -1,6 +1,6 @@
 {
   "app": {
-    "description": "Affiche les tickets récents dans la barre latérale du ticket.",
+    "short_description": "Affiche les tickets récents dans la barre latérale du ticket.",
     "name": "Historique des tickets",
     "installation_instructions": "L'installation est simple. Il suffit de rechercher l'application Historique des tickets dans Zendesk Apps Marketplace et de cliquer sur Installer.",
     "long_description": "Affiche les tickets récents d'un utilisateur dans la barre latérale des tickets, ainsi que l'état, la date de création et l'utilisateur actuellement affecté. En cliquant sur un ticket particulier ouvrira un aperçu du commentaire original du demandeur, et permet également à l'utilisateur de passer directement à ce ticket dans l'interface de l'agent.",

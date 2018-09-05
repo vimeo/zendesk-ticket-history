@@ -1,8 +1,8 @@
 {
   "app": {
-    "description": "Displays recent tickets in the ticket sidebar.",
     "name": "Ticket History",
     "installation_instructions": "Installation is simple. Simply search for the Ticket History app in the Zendesk Apps Marketplace and click Install.",
+    "short_description": "Displays recent tickets in the ticket sidebar.",
     "long_description": "Displays a user's recent tickets in the ticket sidebar, along with the status, creation date, and currently assigned user. Clicking on a particular ticket will open up a preview of the requester's original comment, and also allows the user to switch directly to that ticket in the agent interface.",
     "parameters": {
       "list_length": {
