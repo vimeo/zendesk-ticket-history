@@ -129,9 +129,9 @@ class TicketSidebar {
 					current_ticket: false,
 					satisfaction_score: 'unknown',
 					satisfaction_symbol: ''
-				};  
+				};
 
-				if (ticket.satisfaction_rating.score) {
+				if (ticket.satisfaction_rating && ticket.satisfaction_rating.score) {
 					formatted_ticket.satisfaction_score = ticket.satisfaction_rating.score;
 
 					switch (ticket.satisfaction_rating.score) {
