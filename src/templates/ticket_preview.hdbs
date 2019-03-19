@@ -4,7 +4,7 @@
 			<h1>{{t "ticket_preview" id=this.id}}</h1>
 		</div>
 		<div class="panel-body">
-			<p>{{this.description}}</p>
+			<p>{{{sanitize this.description}}}</p>
 		</div>
 	</div>
 
