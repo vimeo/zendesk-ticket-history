@@ -1,6 +1,6 @@
 {
   "name": "zendesk-ticket-history",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Displays recent tickets in the ticket sidebar.",
   "repository": {
     "type": "git",
