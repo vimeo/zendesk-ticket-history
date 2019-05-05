@@ -105,7 +105,15 @@ class TicketSidebar {
 	}
 
 	getRecentTickets() {
-		return this.client.request({ url: `/api/v2/users/${this.requester.id}/tickets/requested.json?sort_by=created_at&sort_order=desc` });
+		return this.client.request({
+			url: `/api/v2/users/${this.requester.id}/tickets/requested.json`,
+			cachable: true,
+      			data: {
+          		exclude_archived: true,
+			sort_by: 'created_at',
+			sort_order: 'desc'
+			}
+		});
 	}
 
 	formatTickets(recent_tickets) {
