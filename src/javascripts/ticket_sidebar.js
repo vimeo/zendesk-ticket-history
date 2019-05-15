@@ -108,10 +108,10 @@ class TicketSidebar {
 		return this.client.request({
 			url: `/api/v2/users/${this.requester.id}/tickets/requested.json`,
 			cachable: true,
-      			data: {
-          		exclude_archived: true,
-			sort_by: 'created_at',
-			sort_order: 'desc'
+			data: {
+				exclude_archived: true,
+				sort_by: 'created_at',
+				sort_order: 'desc'
 			}
 		});
 	}
@@ -217,7 +217,7 @@ class TicketSidebar {
 		}
 
 		return parts[0] + ' ' + parts[1].substring(0, 1) + '.';
-	} 
+	}
 
 	getUserById(id) {
 		return this.client.request({ url: `/api/v2/users/${id}.json` });
