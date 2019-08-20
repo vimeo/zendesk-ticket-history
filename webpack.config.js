@@ -98,9 +98,11 @@ module.exports = {
       template: '!!handlebars!./lib/templates/layout.hdbs'
     }),
     new webpack.optimize.UglifyJsPlugin({
+      comments: false,
       compress: {
         drop_debugger: false,
-        warnings: false
+        warnings: false,
+        drop_console: true
       }
     })
   ]

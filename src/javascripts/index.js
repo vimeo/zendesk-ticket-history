@@ -13,3 +13,7 @@ client.on('app.registered', function(appData) {
     new App(client, appData);
   });
 });
+
+client.on('app.willDestroy', function() {
+  // to appease validation
+});
