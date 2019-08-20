@@ -8,7 +8,11 @@ Installation is simple. Simply search for the Ticket History app in the [Zendesk
 
 ## Configuration
 
-If you'd like to change the default number of tickets shown in the app, you can do so by adjusting the "List Length" property in the app settings.
+_Setting_ | _Description_
+:=======: | :-----------:
+List length | Changes the default number of tickets shown in the app
+Show satisfaction ratings | When enabled, indicators will appear next to each ticket's subject line for good, bad, and/or unoffered satisfaction scores
+Show preview | When enabled, clicking on a ticket in the app will open a modal with a preview of the ticket
 
 ## Screenshots
 
