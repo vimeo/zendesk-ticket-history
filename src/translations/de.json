@@ -8,6 +8,14 @@
       "list_length": {
         "label": "Liste Länge",
         "helpText": "Wie viele Artikel sollten in der letzten Kartenliste erscheinen?"
+      },
+      "show_satisfaction": {
+        "label": "Zufriedenheitsbewertungen anzeigen",
+        "helpText": "Wenn diese Option aktiviert ist, werden neben der Betreffzeile jedes Tickets Anzeigen für gute, schlechte und / oder nicht angebotene Zufriedenheitsbewertungen angezeigt."
+      },
+      "show_preview": {
+        "label": "Ticketvorschau anzeigen",
+        "helpText": "Wenn diese Option aktiviert ist, wird durch Klicken auf ein Ticket in der App ein Modal mit einer Vorschau des Tickets geöffnet."
       }
     }
   },

@@ -8,6 +8,14 @@
       "list_length": {
         "label": "Longueur de liste",
         "helpText": "Combien d'articles devraient apparaître dans la liste des tickets récents?"
+      },
+      "show_satisfaction": {
+        "label": "Afficher les cotes de satisfaction",
+        "helpText": "Lorsque cette option est activée, des indicateurs s'affichent à côté de la ligne d'objet de chaque ticket pour indiquer des scores de satisfaction bons, mauvais et / ou non proposés."
+      },
+      "show_preview": {
+        "label": "Afficher l'aperçu du tickets",
+        "helpText": "Lorsqu'elle est activée, cliquer sur un ticket dans l'application ouvrira une modale avec un aperçu du ticket."
       }
     }
   },

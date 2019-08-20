@@ -22,6 +22,11 @@
       "name": "show_satisfaction",
       "type": "checkbox",
       "default": true
+    },
+    {
+      "name": "show_preview",
+      "type": "checkbox",
+      "required": true
     }
   ],
   "version": "1.0.4",

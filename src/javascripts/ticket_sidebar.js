@@ -12,6 +12,7 @@ class TicketSidebar {
 		this.showing_all = false;
 		this.list_length = this._metadata.settings.list_length;
 		this.show_satisfaction = this._metadata.settings.show_satisfaction;
+		this.show_preview = this._metadata.settings.show_preview;
 
 		this.storage = new Storage(this._metadata.installationId);
 		this.view = new View({ afterRender: () => {
@@ -37,12 +38,18 @@ class TicketSidebar {
 
 	attachEvents() {
 		$('.ticket-link').not('.active').click((e) => {
+			const ticketId = $(e.currentTarget).data('ticket-id');
+
 			e.preventDefault();
 
-			this.client.invoke('instances.create', {
-				location: 'modal',
-				url: 'assets/index.html?ticket_id=' + $(e.currentTarget).data('ticket-id')
-			});
+			if (this.show_preview) {
+				return this.client.invoke('instances.create', {
+					location: 'modal',
+					url: `assets/index.html?ticket_id=${ticketId}`
+				});
+			}
+
+			return this.client.invoke('routeTo', 'ticket', ticketId);
 		});
 
 		$('#show_all').click((e) => {
