@@ -29,7 +29,7 @@
     "eslint": "~2.2.0",
     "eslint-loader": "^1.2.1",
     "extract-text-webpack-plugin": "^1.0.1",
-    "handlebars": "^4.0.5",
+    "handlebars": "^4.3.0",
     "handlebars-loader": "^1.4.0",
     "html-webpack-plugin": "^2.22.0",
     "jasmine-core": "^2.4.1",
