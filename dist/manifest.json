@@ -27,8 +27,13 @@
       "name": "show_preview",
       "type": "checkbox",
       "default": true
+    },
+    {
+      "name": "exclude_archived",
+      "type": "checkbox",
+      "default": true
     }
   ],
-  "version": "1.0.5",
+  "version": "1.0.6",
   "frameworkVersion": "2.0"
 }

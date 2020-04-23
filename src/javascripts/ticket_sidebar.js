@@ -13,6 +13,7 @@ class TicketSidebar {
 		this.list_length = this._metadata.settings.list_length;
 		this.show_satisfaction = this._metadata.settings.show_satisfaction;
 		this.show_preview = this._metadata.settings.show_preview;
+		this.exclude_archived = this._metadata.settings.exclude_archived;
 
 		this.storage = new Storage(this._metadata.installationId);
 		this.view = new View({ afterRender: () => {
@@ -116,7 +117,7 @@ class TicketSidebar {
 			url: `/api/v2/users/${this.requester.id}/tickets/requested.json`,
 			cachable: true,
 			data: {
-				exclude_archived: true,
+				exclude_archived: this.exclude_archived,
 				sort_by: 'created_at',
 				sort_order: 'desc'
 			}

@@ -10,12 +10,13 @@ var externalAssets = {
     'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
   ],
   js: [
-    'https://cdn.jsdelivr.net/g/lodash@4.14.0,handlebarsjs@4.0.5,jquery@3.1.0',
-    'https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js',
+    'https://cdn.jsdelivr.net/g/lodash@4.14.0,jquery@3.1.0',
+    'https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.runtime.min.js',
     'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js'
+    'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js',
+    'https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js',
   ]
-}
+};
 
 module.exports = {
   progress: true,
