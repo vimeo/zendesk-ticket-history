@@ -46,6 +46,6 @@
     "webpack": "^1.12.13"
   },
   "dependencies": {
-    "moment": "^2.17.1"
+    "moment": "^2.29.4"
   }
 }
